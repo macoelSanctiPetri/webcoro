@@ -49,7 +49,7 @@ function renderAgenda() {
   const list = $('#agenda-list');
   list.innerHTML = '';
   state.agenda.forEach(item => {
-    const dateObj = new Date(item.date + 'T00:00:00');
+    const dateObj = new Date(`${item.date}T${item.time || '00:00'}`);
     const formatted = dateObj.toLocaleDateString(state.lang === 'es' ? 'es-ES' : 'en-GB', {
       weekday: 'short',
       year: 'numeric',
@@ -59,9 +59,11 @@ function renderAgenda() {
     const card = document.createElement('article');
     card.className = 'card';
     card.innerHTML = `
-      <p class="tag">${formatted} · ${item.time}</p>
+      <div class="card__top">
+        <p class="tag">${formatted} · ${item.time}</p>
+        <p class="muted">${item.city} · ${item.venue}</p>
+      </div>
       <h4>${item.program}</h4>
-      <p class="muted">${item.venue} · ${item.city}</p>
       <p class="muted">${item.notes || ''}</p>
     `;
     list.appendChild(card);
@@ -98,6 +100,40 @@ function renderPrograms(category = document.querySelector('.tab--active')?.datas
   });
 }
 
+function renderSpotlight() {
+  const spotlight = $('#agenda-spotlight');
+  if (!spotlight) return;
+  const t = state.translations[state.lang];
+  if (!t) return;
+  const cta = $('#spotlight-cta');
+  const titleNode = $('#spotlight-title');
+  const metaNode = $('#spotlight-meta');
+  const notesNode = $('#spotlight-notes');
+
+  if (!state.agenda.length) {
+    titleNode.textContent = t.hero.emptySpotlight;
+    metaNode.textContent = '';
+    notesNode.textContent = '';
+    cta.textContent = t.hero.ctaSpotlight || t.hero.ctaPrimary;
+    return;
+  }
+
+  const today = new Date();
+  const sorted = [...state.agenda].sort((a, b) => new Date(`${a.date}T${a.time || '00:00'}`) - new Date(`${b.date}T${b.time || '00:00'}`));
+  const upcoming = sorted.find(item => new Date(`${item.date}T${item.time || '00:00'}`) >= today) || sorted[0];
+  const dateObj = new Date(`${upcoming.date}T${upcoming.time || '00:00'}`);
+  const formatted = dateObj.toLocaleDateString(state.lang === 'es' ? 'es-ES' : 'en-GB', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  titleNode.textContent = upcoming.program;
+  metaNode.textContent = `${formatted} · ${upcoming.time} · ${upcoming.city} · ${upcoming.venue}`;
+  notesNode.textContent = upcoming.notes || '';
+  cta.textContent = t.hero.ctaSpotlight || t.hero.ctaPrimary;
+}
+
 function bindEvents() {
   $$('.lang-switch__btn').forEach(btn =>
     btn.addEventListener('click', () => setLang(btn.dataset.lang))
@@ -116,6 +152,7 @@ function bindEvents() {
 function renderAll() {
   renderText();
   renderAgenda();
+  renderSpotlight();
   renderMilestones();
   renderPrograms();
 }
