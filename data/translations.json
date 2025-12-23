@@ -14,7 +14,19 @@
       "subtitle": "Desde 1991, Nova Mvsica interpreta repertorio sacro y profano con un sonido refinado y cercano al público.",
       "ctaPrimary": "Próximo concierto",
       "ctaSecondary": "Contratación",
-      "caption": "Momentos recientes de la temporada"
+      "ctaSpotlight": "Ver agenda completa",
+      "caption": "Momentos recientes de la temporada",
+      "gallery": "Fotogramas de gira y liturgia",
+      "nextLabel": "Próxima fecha",
+      "emptySpotlight": "Próximas fechas en preparación",
+      "stats": {
+        "years": "34 años",
+        "yearsLabel": "Trayectoria y archivo",
+        "repertoire": "+220 obras",
+        "repertoireLabel": "Programas recuperados",
+        "voices": "12-16 voces",
+        "voicesLabel": "Formato flexible"
+      }
     },
     "agenda": {
       "kicker": "Próximas citas",
@@ -91,7 +103,19 @@
       "subtitle": "Since 1991 Nova Mvsica performs sacred and secular repertoire with a refined, intimate sound.",
       "ctaPrimary": "Next concert",
       "ctaSecondary": "Booking",
-      "caption": "Recent moments on stage"
+      "ctaSpotlight": "View full calendar",
+      "caption": "Recent moments on stage",
+      "gallery": "Live & liturgical snapshots",
+      "nextLabel": "Coming up",
+      "emptySpotlight": "New dates coming soon",
+      "stats": {
+        "years": "34 years",
+        "yearsLabel": "Career & archive",
+        "repertoire": "220+ works",
+        "repertoireLabel": "Pieces revived",
+        "voices": "12-16 voices",
+        "voicesLabel": "Flexible line-up"
+      }
     },
     "agenda": {
       "kicker": "Upcoming",

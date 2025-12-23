@@ -6,160 +6,208 @@
   <title>Nova Mvsica · Coro de Cámara</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="backdrop"></div>
   <header class="site-header">
-    <div class="brand">
-      <img id="logo" src="assets/logo.jpg" alt="Nova Mvsica" loading="lazy">
-      <div>
-        <p class="brand__kicker">Coro de cámara</p>
-        <h1 class="brand__name">Nova Mvsica</h1>
+    <div class="container header__inner">
+      <div class="brand">
+        <img id="logo" src="assets/logo.jpg" alt="Nova Mvsica" loading="lazy">
+        <div>
+          <p class="brand__kicker">Coro de cámara</p>
+          <h1 class="brand__name">Nova Mvsica</h1>
+        </div>
       </div>
-    </div>
-    <nav class="main-nav" aria-label="Principal">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
-      <ul id="nav-links">
-        <li><a data-i18n="nav.home" href="#inicio"></a></li>
-        <li><a data-i18n="nav.agenda" href="#agenda"></a></li>
-        <li><a data-i18n="nav.about" href="#sobre"></a></li>
-        <li><a data-i18n="nav.programs" href="#programas"></a></li>
-        <li><a data-i18n="nav.media" href="#multimedia"></a></li>
-        <li><a data-i18n="nav.contact" href="#contacto"></a></li>
-      </ul>
-    </nav>
-    <div class="lang-switch" role="group" aria-label="Idioma">
-      <button data-lang="es" class="lang-switch__btn lang-switch__btn--active">ES</button>
-      <button data-lang="en" class="lang-switch__btn">EN</button>
+      <nav class="main-nav" aria-label="Principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul id="nav-links">
+          <li><a data-i18n="nav.home" href="#inicio"></a></li>
+          <li><a data-i18n="nav.agenda" href="#agenda"></a></li>
+          <li><a data-i18n="nav.about" href="#sobre"></a></li>
+          <li><a data-i18n="nav.programs" href="#programas"></a></li>
+          <li><a data-i18n="nav.media" href="#multimedia"></a></li>
+          <li><a data-i18n="nav.contact" href="#contacto"></a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button data-lang="es" class="lang-switch__btn lang-switch__btn--active">ES</button>
+        <button data-lang="en" class="lang-switch__btn">EN</button>
+      </div>
     </div>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <div class="hero__text">
-        <p class="kicker" data-i18n="hero.kicker"></p>
-        <h2 data-i18n="hero.title"></h2>
-        <p class="lead" data-i18n="hero.subtitle"></p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#agenda" data-i18n="hero.ctaPrimary"></a>
-          <a class="btn btn--ghost" href="#contacto" data-i18n="hero.ctaSecondary"></a>
-        </div>
-      </div>
-      <div class="hero__image">
-        <div class="carousel" aria-label="Galería de imágenes del coro">
-          <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
-          <div class="carousel__track">
-            <figure class="carousel__slide is-active">
-              <img src="assets/coro-01.jpg" alt="Coro Nova Mvsica en concierto" loading="lazy">
-            </figure>
-            <figure class="carousel__slide">
-              <img src="assets/coro-02.jpg" alt="Coro Nova Mvsica en templo" loading="lazy">
-            </figure>
-            <figure class="carousel__slide">
-              <img src="assets/coro-03.jpg" alt="Coro Nova Mvsica en Navidad" loading="lazy">
-            </figure>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="pill pill--muted" data-i18n="hero.kicker"></p>
+          <h2 data-i18n="hero.title"></h2>
+          <p class="lead" data-i18n="hero.subtitle"></p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#agenda" data-i18n="hero.ctaPrimary"></a>
+            <a class="btn btn--ghost" href="#contacto" data-i18n="hero.ctaSecondary"></a>
           </div>
-          <div class="carousel__dots" role="tablist" aria-label="Selecciona imagen"></div>
+          <div class="hero__stats">
+            <div class="stat">
+              <p class="stat__value" data-i18n="hero.stats.years"></p>
+              <p class="stat__label" data-i18n="hero.stats.yearsLabel"></p>
+            </div>
+            <div class="stat">
+              <p class="stat__value" data-i18n="hero.stats.repertoire"></p>
+              <p class="stat__label" data-i18n="hero.stats.repertoireLabel"></p>
+            </div>
+            <div class="stat">
+              <p class="stat__value" data-i18n="hero.stats.voices"></p>
+              <p class="stat__label" data-i18n="hero.stats.voicesLabel"></p>
+            </div>
+          </div>
         </div>
-        <p class="caption" data-i18n="hero.caption"></p>
+        <div class="hero__panel">
+          <div class="panel panel--glass spotlight" id="agenda-spotlight">
+            <p class="pill pill--accent" data-i18n="hero.nextLabel"></p>
+            <h3 id="spotlight-title"></h3>
+            <p id="spotlight-meta" class="muted"></p>
+            <p id="spotlight-notes" class="muted"></p>
+            <a class="btn btn--ghost" href="#agenda" id="spotlight-cta"></a>
+          </div>
+          <div class="panel panel--contrast">
+            <div class="panel__header">
+              <p class="pill pill--muted" data-i18n="hero.caption"></p>
+              <span class="panel__hint" data-i18n="hero.gallery"></span>
+            </div>
+            <div class="carousel" aria-label="Galería de imágenes del coro">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+              <div class="carousel__track">
+                <figure class="carousel__slide is-active">
+                  <img src="assets/coro-01.jpg" alt="Coro Nova Mvsica en concierto" loading="lazy">
+                </figure>
+                <figure class="carousel__slide">
+                  <img src="assets/coro-02.jpg" alt="Coro Nova Mvsica en templo" loading="lazy">
+                </figure>
+                <figure class="carousel__slide">
+                  <img src="assets/coro-03.jpg" alt="Coro Nova Mvsica en Navidad" loading="lazy">
+                </figure>
+              </div>
+              <div class="carousel__dots" role="tablist" aria-label="Selecciona imagen"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="agenda" class="section">
-      <div class="section__header">
-        <p class="kicker" data-i18n="agenda.kicker"></p>
-        <h3 data-i18n="agenda.title"></h3>
-        <p class="section__intro" data-i18n="agenda.intro"></p>
+      <div class="container">
+        <div class="section__header">
+          <p class="kicker" data-i18n="agenda.kicker"></p>
+          <h3 data-i18n="agenda.title"></h3>
+          <p class="section__intro" data-i18n="agenda.intro"></p>
+        </div>
+        <div id="agenda-list" class="cards-grid"></div>
       </div>
-      <div id="agenda-list" class="cards-grid"></div>
     </section>
 
     <section id="sobre" class="section section--split">
-      <div>
-        <p class="kicker" data-i18n="about.kicker"></p>
-        <h3 data-i18n="about.title"></h3>
-        <p data-i18n="about.text1"></p>
-        <p data-i18n="about.text2"></p>
-        <ul class="milestones" id="milestones"></ul>
-      </div>
-      <div class="portrait">
-        <img src="assets/coro-02.jpg" alt="Actuación del coro" loading="lazy">
+      <div class="container split">
+        <div>
+          <p class="kicker" data-i18n="about.kicker"></p>
+          <h3 data-i18n="about.title"></h3>
+          <p data-i18n="about.text1"></p>
+          <p data-i18n="about.text2"></p>
+          <ul class="milestones" id="milestones"></ul>
+        </div>
+        <div class="portrait">
+          <div class="glow"></div>
+          <img src="assets/coro-02.jpg" alt="Actuación del coro" loading="lazy">
+        </div>
       </div>
     </section>
 
     <section id="director" class="section section--alt">
-      <div class="section__header">
-        <p class="kicker" data-i18n="director.kicker"></p>
-        <h3 data-i18n="director.title"></h3>
-      </div>
-      <div class="director">
-        <img src="assets/director.jpg" alt="Director del coro" loading="lazy">
-        <div>
-          <p data-i18n="director.bio1"></p>
-          <p data-i18n="director.bio2"></p>
-          <p data-i18n="director.contact"></p>
+      <div class="container">
+        <div class="section__header">
+          <p class="kicker" data-i18n="director.kicker"></p>
+          <h3 data-i18n="director.title"></h3>
+        </div>
+        <div class="director">
+          <img src="assets/director.jpg" alt="Director del coro" loading="lazy">
+          <div>
+            <p data-i18n="director.bio1"></p>
+            <p data-i18n="director.bio2"></p>
+            <p data-i18n="director.contact"></p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="programas" class="section">
-      <div class="section__header">
-        <p class="kicker" data-i18n="programs.kicker"></p>
-        <h3 data-i18n="programs.title"></h3>
-        <p class="section__intro" data-i18n="programs.intro"></p>
+      <div class="container">
+        <div class="section__header">
+          <p class="kicker" data-i18n="programs.kicker"></p>
+          <h3 data-i18n="programs.title"></h3>
+          <p class="section__intro" data-i18n="programs.intro"></p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Programas">
+          <button class="tab tab--active" data-category="sacred" role="tab" aria-selected="true" data-i18n="programs.tabs.sacred"></button>
+          <button class="tab" data-category="profane" role="tab" aria-selected="false" data-i18n="programs.tabs.profane"></button>
+          <button class="tab" data-category="christmas" role="tab" aria-selected="false" data-i18n="programs.tabs.christmas"></button>
+        </div>
+        <div id="programs-list" class="programs"></div>
       </div>
-      <div class="tabs" role="tablist" aria-label="Programas">
-        <button class="tab tab--active" data-category="sacred" role="tab" aria-selected="true" data-i18n="programs.tabs.sacred"></button>
-        <button class="tab" data-category="profane" role="tab" aria-selected="false" data-i18n="programs.tabs.profane"></button>
-        <button class="tab" data-category="christmas" role="tab" aria-selected="false" data-i18n="programs.tabs.christmas"></button>
-      </div>
-      <div id="programs-list" class="programs"></div>
     </section>
 
     <section id="multimedia" class="section section--alt">
-      <div class="section__header">
-        <p class="kicker" data-i18n="media.kicker"></p>
-        <h3 data-i18n="media.title"></h3>
-        <p class="section__intro" data-i18n="media.intro"></p>
+      <div class="container">
+        <div class="section__header">
+          <p class="kicker" data-i18n="media.kicker"></p>
+          <h3 data-i18n="media.title"></h3>
+          <p class="section__intro" data-i18n="media.intro"></p>
+        </div>
+        <div class="media-grid">
+          <div class="media-card">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Nova Mvsica en concierto" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="media-card">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Nova Mvsica - pieza destacada" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <p class="muted" data-i18n="media.more"></p>
       </div>
-      <div class="media-grid">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Nova Mvsica en concierto" allowfullscreen loading="lazy"></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Nova Mvsica - pieza destacada" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <p class="muted" data-i18n="media.more"></p>
     </section>
 
     <section id="contacto" class="section">
-      <div class="section__header">
-        <p class="kicker" data-i18n="contact.kicker"></p>
-        <h3 data-i18n="contact.title"></h3>
-        <p class="section__intro" data-i18n="contact.intro"></p>
-      </div>
-      <div class="contact">
-        <div>
-          <p><strong data-i18n="contact.emailLabel"></strong> <a id="contact-email" href="mailto:info@novamvsica.com">info@novamvsica.com</a></p>
-          <p><strong data-i18n="contact.phoneLabel"></strong> <span id="contact-phone">+34 000 000 000</span></p>
-          <p><strong data-i18n="contact.locationLabel"></strong> <span data-i18n="contact.locationValue"></span></p>
-          <div class="social">
-            <a href="https://www.youtube.com/user/novamvsica" target="_blank" rel="noreferrer">YouTube</a>
-            <a href="https://www.flickr.com/photos/nova_musica/" target="_blank" rel="noreferrer">Flickr</a>
-            <a href="https://www.facebook.com/novamvsica" target="_blank" rel="noreferrer">Facebook</a>
-          </div>
+      <div class="container">
+        <div class="section__header">
+          <p class="kicker" data-i18n="contact.kicker"></p>
+          <h3 data-i18n="contact.title"></h3>
+          <p class="section__intro" data-i18n="contact.intro"></p>
         </div>
-        <form class="contact-form">
-          <label data-i18n="contact.form.nameLabel">
-            <input type="text" name="name" placeholder="" required>
-          </label>
-          <label data-i18n="contact.form.emailLabel">
-            <input type="email" name="email" placeholder="" required>
-          </label>
-          <label data-i18n="contact.form.messageLabel">
-            <textarea name="message" rows="4" placeholder="" required></textarea>
-          </label>
-          <button type="submit" class="btn btn--primary" data-i18n="contact.form.submit"></button>
-        </form>
+        <div class="contact">
+          <div class="panel panel--glass">
+            <p><strong data-i18n="contact.emailLabel"></strong> <a id="contact-email" href="mailto:info@novamvsica.com">info@novamvsica.com</a></p>
+            <p><strong data-i18n="contact.phoneLabel"></strong> <span id="contact-phone">+34 000 000 000</span></p>
+            <p><strong data-i18n="contact.locationLabel"></strong> <span data-i18n="contact.locationValue"></span></p>
+            <div class="social">
+              <a href="https://www.youtube.com/user/novamvsica" target="_blank" rel="noreferrer">YouTube</a>
+              <a href="https://www.flickr.com/photos/nova_musica/" target="_blank" rel="noreferrer">Flickr</a>
+              <a href="https://www.facebook.com/novamvsica" target="_blank" rel="noreferrer">Facebook</a>
+            </div>
+          </div>
+          <form class="contact-form panel panel--contrast">
+            <label data-i18n="contact.form.nameLabel">
+              <input type="text" name="name" placeholder="" required>
+            </label>
+            <label data-i18n="contact.form.emailLabel">
+              <input type="email" name="email" placeholder="" required>
+            </label>
+            <label data-i18n="contact.form.messageLabel">
+              <textarea name="message" rows="4" placeholder="" required></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary" data-i18n="contact.form.submit"></button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
