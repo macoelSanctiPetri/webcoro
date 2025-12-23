@@ -1,0 +1,156 @@
+{
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "agenda": "Agenda",
+      "about": "El coro",
+      "programs": "Programas",
+      "media": "Multimedia",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "kicker": "Coro de cámara · Cádiz",
+      "title": "Polifonía renacentista con alma contemporánea",
+      "subtitle": "Desde 1991, Nova Mvsica interpreta repertorio sacro y profano con un sonido refinado y cercano al público.",
+      "ctaPrimary": "Próximo concierto",
+      "ctaSecondary": "Contratación",
+      "caption": "Momentos recientes de la temporada"
+    },
+    "agenda": {
+      "kicker": "Próximas citas",
+      "title": "Agenda 2025",
+      "intro": "Música sacra para la Cuaresma y programas temáticos durante todo el año."
+    },
+    "about": {
+      "kicker": "Nuestra historia",
+      "title": "Más de tres décadas de polifonía",
+      "text1": "Fundado en 1991, Nova Mvsica ha estrenado y recuperado más de 220 obras renacentistas y barrocas, actuando en templos y festivales de referencia.",
+      "text2": "El coro colabora con instituciones culturales y ha sido finalista en concursos nacionales, manteniendo una línea de investigación y divulgación musical.",
+      "milestones": [
+        "1991 · Fundación del coro de cámara Nova Mvsica",
+        "1997 · Publicación del CD de música sacra",
+        "1998 · Finalistas del Concurso Nacional de Coros de Sevilla",
+        "2024 · Gira provincial de Adviento y Navidad"
+      ]
+    },
+    "director": {
+      "kicker": "Dirección musical",
+      "title": "Eduardo Gallardo de Gomar",
+      "bio1": "Director y fundador de Nova Mvsica, licenciado en Musicología y especializado en interpretación vocal renacentista.",
+      "bio2": "Combina la investigación histórica con la búsqueda de un sonido flexible y expresivo, adaptado a cada espacio.",
+      "contact": "Contacto: info@novamvsica.com"
+    },
+    "programs": {
+      "kicker": "Repertorio",
+      "title": "Programas destacados",
+      "intro": "Selecciona una línea temática para ver ejemplos de obras y compositores.",
+      "tabs": {
+        "sacred": "Sacra",
+        "profane": "Profana",
+        "christmas": "Navidad"
+      }
+    },
+    "media": {
+      "kicker": "Escúchanos",
+      "title": "Multimedia",
+      "intro": "Grabaciones en directo y selecciones de nuestros programas.",
+      "more": "Encuentra más vídeos en nuestro canal de YouTube y galerías en Flickr."
+    },
+    "contact": {
+      "kicker": "Contratación y prensa",
+      "title": "Hablemos",
+      "intro": "Para conciertos, liturgias, colaboraciones o talleres vocales.",
+      "emailLabel": "Correo",
+      "phoneLabel": "Teléfono",
+      "locationLabel": "Sede",
+      "locationValue": "Cádiz, Andalucía",
+      "form": {
+        "nameLabel": "Nombre",
+        "emailLabel": "Email",
+        "messageLabel": "Mensaje",
+        "submit": "Enviar"
+      }
+    },
+    "footer": {
+      "rights": "© 2025 Nova Mvsica · Cádiz",
+      "legal": "Sitio en revisión · Portafolio interno"
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "agenda": "Concerts",
+      "about": "About",
+      "programs": "Programs",
+      "media": "Media",
+      "contact": "Contact"
+    },
+    "hero": {
+      "kicker": "Chamber choir · Cádiz",
+      "title": "Renaissance polyphony with a contemporary soul",
+      "subtitle": "Since 1991 Nova Mvsica performs sacred and secular repertoire with a refined, intimate sound.",
+      "ctaPrimary": "Next concert",
+      "ctaSecondary": "Booking",
+      "caption": "Recent moments on stage"
+    },
+    "agenda": {
+      "kicker": "Upcoming",
+      "title": "2025 season",
+      "intro": "Sacred music for Lent and thematic programs throughout the year."
+    },
+    "about": {
+      "kicker": "Our story",
+      "title": "Three decades of polyphony",
+      "text1": "Founded in 1991, Nova Mvsica has premiered and revived over 220 Renaissance and Baroque works, performing in renowned churches and festivals.",
+      "text2": "The choir works with cultural institutions and has been finalist in national competitions, combining research with musical outreach.",
+      "milestones": [
+        "1991 · Choir founded",
+        "1997 · Sacred music CD release",
+        "1998 · Finalists at the Seville National Choir Competition",
+        "2024 · Advent & Christmas provincial tour"
+      ]
+    },
+    "director": {
+      "kicker": "Musical direction",
+      "title": "Eduardo Gallardo de Gomar",
+      "bio1": "Founder and director of Nova Mvsica, musicologist specialized in Renaissance vocal practice.",
+      "bio2": "Combines historical research with a flexible, expressive sound tailored to each venue.",
+      "contact": "Contact: info@novamvsica.com"
+    },
+    "programs": {
+      "kicker": "Repertoire",
+      "title": "Featured programs",
+      "intro": "Choose a theme to view sample works and composers.",
+      "tabs": {
+        "sacred": "Sacred",
+        "profane": "Secular",
+        "christmas": "Christmas"
+      }
+    },
+    "media": {
+      "kicker": "Listen",
+      "title": "Media",
+      "intro": "Live recordings and highlights from our programs.",
+      "more": "Find more videos on YouTube and galleries on Flickr."
+    },
+    "contact": {
+      "kicker": "Booking & press",
+      "title": "Get in touch",
+      "intro": "For concerts, liturgy, collaborations or vocal workshops.",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "locationLabel": "Location",
+      "locationValue": "Cádiz, Andalusia (Spain)",
+      "form": {
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "messageLabel": "Message",
+        "submit": "Send"
+      }
+    },
+    "footer": {
+      "rights": "© 2025 Nova Mvsica · Cádiz",
+      "legal": "Site under review · Internal preview"
+    }
+  }
+}
